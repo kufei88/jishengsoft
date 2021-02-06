@@ -17,7 +17,7 @@
             <el-menu-item style="border-bottom: solid 0px;margin-left:-1%">
               <div class="layout-logo">
                 <router-link to="/home">
-                  <img src="./assets/济胜logo.png" width="180px" height="60px">
+                  <img src="./assets/济胜logo-02-01-01.png" width="180px" height="60px" />
                 </router-link>
               </div>
             </el-menu-item>
@@ -30,10 +30,10 @@
               <el-menu-item index="solution_2">家装建材行业解决方案</el-menu-item>
               <el-menu-item index="solution_3">医疗器械行业解决方案</el-menu-item>
               <el-submenu index="2-4">
-                <template slot="title">选项4</template>
-                <el-menu-item index="2-4-1">选项1</el-menu-item>
-                <el-menu-item index="2-4-2">选项2</el-menu-item>
-                <el-menu-item index="2-4-3">选项3</el-menu-item>
+                <template slot="title">其它行业</template>
+                <el-menu-item index="solution_4">不锈钢线材解决方案</el-menu-item>
+                <el-menu-item index="solution_5">锯床行业解决方案</el-menu-item>
+                <el-menu-item index="solution_6">吸尘器行业解决方案</el-menu-item>
               </el-submenu>
             </el-submenu>
             <el-menu-item index="made" style="font-size:18px">智能制造</el-menu-item>
@@ -49,12 +49,12 @@
             </el-menu-item>
             <el-menu-item index>
               <a
-                href="http://www.jishengsoft.com/bbs/index.asp"
+                href="https://www.yuque.com/jishengsoft"
                 style="display:block;height:60px;font-size:18px"
                 target="_blank"
               >济胜社区</a>
             </el-menu-item>
-
+            <el-menu-item index="download" style="font-size:18px;margin-left:10px">资料下载</el-menu-item>
             <el-menu-item index>
               <a
                 href="http://www.jishengsoft.com/oldIndex.asp"
@@ -62,11 +62,9 @@
                 target="_blank"
               >老版网站</a>
             </el-menu-item>
-            <el-submenu index="3">
-              <template slot="title" style="font-size:18px">了解济胜</template>
-              <el-menu-item index="8">人才规划</el-menu-item>
-              <el-menu-item index="about">关于我们</el-menu-item>
-            </el-submenu>
+
+            <el-menu-item index="about" style="font-size:18px;margin-left:10px">了解济胜</el-menu-item>
+
             <!-- <el-menu-item unvisabled style="border-bottom: solid 0px"></el-menu-item> -->
             <!--
             <AutoComplete
@@ -101,10 +99,10 @@
         </el-header>
       </el-container>
     </el-row>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
+    <br />
 
     <div class="cndns-right">
       <div class="cndns-right-meau meau-car">
@@ -118,7 +116,7 @@
           <span class="demo-icon">&#xe901;</span>
           <p class="top-p">
             在线
-            <br>客服
+            <br />客服
           </p>
         </a>
         <div class="cndns-right-box">
@@ -173,13 +171,13 @@
           <span class="demo-icon">&#xe903;</span>
           <p class="top-p">
             关注
-            <br>微信
+            <br />微信
           </p>
         </a>
         <div class="cndns-right-box">
           <div class="box-border">
             <div class="sev-t">
-              <img src="./assets/backtop/images/公众号二维码.jpg">
+              <img src="./assets/backtop/images/公众号二维码.jpg" />
               <i>关注官方微信</i>
             </div>
             <span class="arrow-right"></span>
@@ -191,7 +189,7 @@
           <span class="demo-icon">&#xe902;</span>
           <p class="top-p">
             客服
-            <br>热线
+            <br />热线
           </p>
         </a>
         <div class="cndns-right-box">
@@ -200,7 +198,7 @@
               <span class="demo-icon">&#xe902;</span>
               <p style="margin-left:5%">
                 0579-83181608
-                <br>
+                <br />
                 <i class="top-i">7*24小时客服服务热线</i>
               </p>
               <div class="clear"></div>
@@ -219,7 +217,7 @@
     </div>
     <router-view></router-view>
 
-    <hr style="height:50px;border:none;border-top:1px solid #DCDFE6;">
+    <hr style="height:50px;border:none;border-top:1px solid #DCDFE6;" />
     <el-row class="footer-row" style="background:#0079e1">
       <el-col :span="6">
         <el-card shadow="hover" class="common-footer">
@@ -227,16 +225,16 @@
             <span class="mid">&nbsp;我想了解</span>
           </div>
           <div class="footer-link">
-            <router-link to>济胜商务管理系统</router-link>
+            <router-link to="business">济胜商务管理系统</router-link>
           </div>
           <div class="footer-link">
-            <router-link to>济胜ERP系统</router-link>
+            <router-link to="made">济胜ERP系统</router-link>
           </div>
           <div class="footer-link">
-            <router-link to>移动APP应用</router-link>
+            <router-link to="app">移动APP应用</router-link>
           </div>
           <div class="footer-link">
-            <router-link to>微商城订货系统</router-link>
+            <router-link to="wechat">微商城订货系统</router-link>
           </div>
         </el-card>
       </el-col>
@@ -246,16 +244,16 @@
             <span class="mid">我是客户</span>
           </div>
           <div class="footer-link">
-            <router-link to>济胜商务管理系统</router-link>
+            <router-link to="business">济胜商务管理系统</router-link>
           </div>
           <div class="footer-link">
-            <router-link to>济胜ERP系统</router-link>
+            <router-link to="made">济胜ERP系统</router-link>
           </div>
           <div class="footer-link">
-            <router-link to>移动APP应用</router-link>
+            <router-link to="app">移动APP应用</router-link>
           </div>
           <div class="footer-link">
-            <router-link to>微商城订货系统</router-link>
+            <router-link to="wechat">微商城订货系统</router-link>
           </div>
         </el-card>
       </el-col>
@@ -265,23 +263,23 @@
             <span class="mid">我是伙伴</span>
           </div>
           <div class="footer-link">
-            <router-link to>常见问题</router-link>
+            <a href="https://www.yuque.com/jishengsoft/wendang" target="_black">常见问题</a>
           </div>
           <div class="footer-link">
             <router-link to="download">资料与软件下载</router-link>
           </div>
           <div class="footer-link">
-            <router-link to>需求提交</router-link>
+            <a href="http://www.jishengsoft.com/register/feedback.html" target="_black">需求提交</a>
           </div>
           <div class="footer-link">
-            <router-link to>在线申请</router-link>
+            <a href="http://www.jishengsoft.com/register/feedback.html" target="_black">在线申请</a>
           </div>
         </el-card>
       </el-col>
       <el-col :span="6">
         <el-card shadow="hover" class="common-footer">
-          <img src="./source/images/qrcode.jpg" style="width:100px">
-          <br>&nbsp;
+          <img src="./source/images/qrcode.jpg" style="width:100px" />
+          <br />&nbsp;
           <span class="mid">预约上门服务</span>
           <h1 style="color:#fff;">0579-83181608</h1>
           <p class="mid">周一至周六 8：30 — 17：30</p>

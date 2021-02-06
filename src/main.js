@@ -1,102 +1,136 @@
-import 'babel-polyfill'
-import Vue from 'vue'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
-import App from './App.vue'
-import Business from './components/business'
-import VueRouter from 'vue-router';
-import Home from './components/home.vue'
-import Solution_1 from './components/solution_1.vue'
-import Solution_2 from './components/solution_2.vue'
-import Solution_3 from './components/solution_3.vue'
-import Search from './components/search.vue'
-import About from './components/about.vue'
-import Download from './components/download.vue'
-import Register from './components/register.vue'
-import News from './components/news.vue'
-import NewsList from './components/newsList.vue'
-import Made from './components/made.vue'
-import Made2 from './components/made2.vue'
-import ErrorPage from './components/404.vue'
-import CarRepair from './components/carRepair.vue'
-import axios from 'axios'
+import "babel-polyfill";
+import Vue from "vue";
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
+import App from "./App.vue";
+import Business from "./components/business";
+import VueRouter from "vue-router";
+import Home from "./components/home.vue";
+import Solution_1 from "./components/solution_1.vue";
+import Solution_2 from "./components/solution_2.vue";
+import Solution_3 from "./components/solution_3.vue";
+import Solution_4 from "./components/solution_4.vue";
+import Solution_5 from "./components/solution_5.vue";
+import Solution_6 from "./components/solution_6.vue";
+import ppt from "./components/ppt.vue";
+import app from "./components/app.vue";
+import agency from "./components/agency.vue";
+import wechat from "./components/wechat.vue";
+import Search from "./components/search.vue";
+import About from "./components/about.vue";
+import Download from "./components/download.vue";
+import Register from "./components/register.vue";
+import News from "./components/news.vue";
+import NewsList from "./components/newsList.vue";
+import Made from "./components/made.vue";
+import Made2 from "./components/made2.vue";
+import ErrorPage from "./components/404.vue";
+import CarRepair from "./components/carRepair.vue";
+import axios from "axios";
 
-require('es6-promise').polyfill()
+require("es6-promise").polyfill();
 
+Vue.use(ElementUI);
+Vue.use(VueRouter);
 
-Vue.use(ElementUI)
-Vue.use(VueRouter)
-
-
-const routes = [ //定义路由
+const routes = [
+  //定义路由
   {
-    path: '/business',
+    path: "/business",
     component: Business
   },
   {
-    path: '/carRepair',
+    path: "/carRepair",
     component: CarRepair
   },
   {
-    path: '/solution_1',
+    path: "/solution_1",
     component: Solution_1
   },
   {
-    path: '/solution_2',
+    path: "/solution_2",
     component: Solution_2
   },
   {
-    path: '/solution_3',
+    path: "/solution_3",
     component: Solution_3
   },
   {
-    path: '/search',
+    path: "/solution_4",
+    component: Solution_4
+  },
+  {
+    path: "/solution_5",
+    component: Solution_5
+  },
+  {
+    path: "/solution_6",
+    component: Solution_6
+  },
+  {
+    path: "/ppt",
+    component: ppt
+  },
+  {
+    path: "/app",
+    component: app
+  },
+  {
+    path: "/agency",
+    component: agency
+  },
+  {
+    path: "/wechat",
+    component: wechat
+  },
+  {
+    path: "/search",
     component: Search
   },
   {
-    path: '/about',
+    path: "/about",
     component: About
   },
   {
-    path: '/download',
+    path: "/download",
     component: Download
   },
   {
-    path: '/register',
+    path: "/register",
     component: Register
   },
   {
-    path: '/newsList',
+    path: "/newsList",
     component: NewsList
   },
   {
-    path: '/news',
+    path: "/news",
     component: News
   },
   {
-    path: '/made',
+    path: "/made",
     component: Made
   },
   {
-    path: '/made2',
+    path: "/made2",
     component: Made2
   },
   {
-    path: '/home',
+    path: "/home",
     component: Home
   },
   {
-    path: '/',
-    redirect: '/home'
+    path: "/",
+    redirect: "/home"
   },
   {
-    path: '/error',
+    path: "/error",
     component: ErrorPage
   },
   {
-    path: '*',
-    redirect: '/error'
-  },
+    path: "*",
+    redirect: "/error"
+  }
   // { path: '/mainPage', component: MainPage,
   //   children:[
   //     {path: '/', component: Submit},
@@ -107,18 +141,22 @@ const routes = [ //定义路由
   //     {path: 'Chuan_xiaochi', component: Chuan_xiaochi}
   //   ]
   // }
-]
+];
 
-const router = new VueRouter({ //创建路由实例
+const router = new VueRouter({
+  //创建路由实例
   // mode: 'history',
   routes
-})
+});
 
 router.beforeEach((to, from, next) => {
-  if (to.matched.length === 0) { //如果未匹配到路由
-    from.name ? next({
-      name: from.name
-    }) : next('/'); //如果上级也未匹配到路由则跳转登录页面，如果上级能匹配到则转上级路由
+  if (to.matched.length === 0) {
+    //如果未匹配到路由
+    from.name ?
+      next({
+        name: from.name
+      }) :
+      next("/"); //如果上级也未匹配到路由则跳转登录页面，如果上级能匹配到则转上级路由
   } else {
     next(); //如果匹配到正确跳转
   }
@@ -135,7 +173,7 @@ router.afterEach((to, from, next) => {
 new Vue({
   router: router,
   render: h => h(App)
-}).$mount('#app')
+}).$mount("#app");
 // new Vue({
 //   el: '#app',
 //   router,

@@ -379,9 +379,19 @@ export default {
       console.log(key, keyPath);
     },
     onRoutes(i) {
+      console.log(i);
       switch (i) {
+        case 0:
+          window.open('https://www.yuque.com/jishengsoft/wendang/mbbgog');
+          break;
         case 1:
           this.$router.push("/made");
+          break;
+        case 3:
+          window.open("https://mp.weixin.qq.com/s?__biz=MzA3NDU5OTQyNg==&mid=2451872029&idx=1&sn=e0f611176ec2ba1ab1ff295a6b7c2df8&chksm=88ad6470bfdaed66e05b9e145b82949d8b2c676e6377fce0558df1281667a3bb6d780e467590&token=2005030829&lang=zh_CN#rd");
+          break;
+        case 4:
+          this.$router.push("/agency");
           break;
         case 100:
           this.$router.push("/made2");
